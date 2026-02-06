@@ -13,8 +13,11 @@
   <property name="windowTitle">
    <string>VConfig</string>
   </property>
+  <property name="windowIcon">
+   <iconset theme="QIcon::ThemeIcon::EditPaste"/>
+  </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
       <x>10</x>

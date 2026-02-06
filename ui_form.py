@@ -25,24 +25,26 @@ class Ui_MainWindow(object):
         if not MainWindow.objectName():
             MainWindow.setObjectName(u"MainWindow")
         MainWindow.resize(254, 278)
+        icon = QIcon(QIcon.fromTheme(QIcon.ThemeIcon.EditPaste))
+        MainWindow.setWindowIcon(icon)
         self.actionOpen = QAction(MainWindow)
         self.actionOpen.setObjectName(u"actionOpen")
         self.centralwidget = QWidget(MainWindow)
         self.centralwidget.setObjectName(u"centralwidget")
-        self.widget = QWidget(self.centralwidget)
-        self.widget.setObjectName(u"widget")
-        self.widget.setGeometry(QRect(10, 10, 217, 238))
-        self.gridLayout = QGridLayout(self.widget)
+        self.layoutWidget = QWidget(self.centralwidget)
+        self.layoutWidget.setObjectName(u"layoutWidget")
+        self.layoutWidget.setGeometry(QRect(10, 10, 217, 238))
+        self.gridLayout = QGridLayout(self.layoutWidget)
         self.gridLayout.setObjectName(u"gridLayout")
         self.gridLayout.setContentsMargins(0, 0, 0, 0)
         self.colorscheme = QHBoxLayout()
         self.colorscheme.setObjectName(u"colorscheme")
-        self.colorscheme_label = QLabel(self.widget)
+        self.colorscheme_label = QLabel(self.layoutWidget)
         self.colorscheme_label.setObjectName(u"colorscheme_label")
 
         self.colorscheme.addWidget(self.colorscheme_label)
 
-        self.comboBox = QComboBox(self.widget)
+        self.comboBox = QComboBox(self.layoutWidget)
         self.comboBox.addItem("")
         self.comboBox.addItem("")
         self.comboBox.addItem("")
@@ -60,32 +62,32 @@ class Ui_MainWindow(object):
 
         self.verticalLayout = QVBoxLayout()
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.lineNumbers = QCheckBox(self.widget)
+        self.lineNumbers = QCheckBox(self.layoutWidget)
         self.lineNumbers.setObjectName(u"lineNumbers")
 
         self.verticalLayout.addWidget(self.lineNumbers)
 
-        self.fileTypeDetection = QCheckBox(self.widget)
+        self.fileTypeDetection = QCheckBox(self.layoutWidget)
         self.fileTypeDetection.setObjectName(u"fileTypeDetection")
 
         self.verticalLayout.addWidget(self.fileTypeDetection)
 
-        self.fileTypeIndent = QCheckBox(self.widget)
+        self.fileTypeIndent = QCheckBox(self.layoutWidget)
         self.fileTypeIndent.setObjectName(u"fileTypeIndent")
 
         self.verticalLayout.addWidget(self.fileTypeIndent)
 
-        self.syntaxHighlight = QCheckBox(self.widget)
+        self.syntaxHighlight = QCheckBox(self.layoutWidget)
         self.syntaxHighlight.setObjectName(u"syntaxHighlight")
 
         self.verticalLayout.addWidget(self.syntaxHighlight)
 
-        self.noBackupFiles = QCheckBox(self.widget)
+        self.noBackupFiles = QCheckBox(self.layoutWidget)
         self.noBackupFiles.setObjectName(u"noBackupFiles")
 
         self.verticalLayout.addWidget(self.noBackupFiles)
 
-        self.wildmenu = QCheckBox(self.widget)
+        self.wildmenu = QCheckBox(self.layoutWidget)
         self.wildmenu.setObjectName(u"wildmenu")
 
         self.verticalLayout.addWidget(self.wildmenu)
@@ -93,7 +95,7 @@ class Ui_MainWindow(object):
 
         self.gridLayout.addLayout(self.verticalLayout, 1, 0, 1, 1)
 
-        self.genConfig = QPushButton(self.widget)
+        self.genConfig = QPushButton(self.layoutWidget)
         self.genConfig.setObjectName(u"genConfig")
 
         self.gridLayout.addWidget(self.genConfig, 2, 0, 1, 1)
